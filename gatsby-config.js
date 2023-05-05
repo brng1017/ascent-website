@@ -18,6 +18,9 @@ module.exports = {
     author: `@brng1017`,
     siteUrl: `https://ascentliondance.org/`,
   },
+  flags: {
+    DEV_SSR: true
+  },
   plugins: [
     `gatsby-plugin-image`,
     {
