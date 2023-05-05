@@ -9,8 +9,11 @@ import "../styles/layout.css";
 const isSSR = typeof window !== 'undefined';
 
 const getWindowSize = () => {
-  const {innerWidth, innerHeight} = isSSR ? window : null;
-  return {innerWidth, innerHeight};
+  if (isSSR) {
+    const {innerWidth, innerHeight} = window;
+    return {innerWidth, innerHeight};
+  }
+  return 0;
 }
 
 const Layout = ({ children, hero, slogan }) => {
