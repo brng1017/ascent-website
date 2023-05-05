@@ -1,0 +1,176 @@
+.booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--size-gutter) var(--size-content);
+}
+
+.booking__header {
+  margin-bottom: 10px;
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-header);
+  font-size: var(--font-header);
+  line-height: var(--line-height-dense);
+  color: var(--color-primary);
+}
+
+.booking__description {
+  margin: 20px 0;
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-lg);
+  line-height: var(--line-height-normal);
+  color: var(--color-code-text);
+}
+
+.booking__description a {
+  color: var(--color-primary);
+}
+
+.booking__description a:hover {
+  text-decoration: underline;
+}
+
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.booking__form label {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-thick);
+  font-size: var(--font-md);
+  line-height: var(--line-height-normal);
+  color: var(--color-code-text);
+}
+
+.booking__form input:not(.booking__form-button, .package__multi-radio_input),
+.booking__form select,
+.booking__form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 10px 0;
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-code-text);
+
+  background-color: #F2F0EB;
+  border-width: 1px;
+  border-color: #D8D5CE;
+  border-style: solid;
+}
+
+.booking__form input:focus:not(.booking__form-button),
+.booking__form select:focus,
+.booking__form textarea:focus {
+  background-color: white;
+}
+
+.booking__form input[type='checkbox'] {
+  display: none;
+}
+
+.booking__form-addons {
+  margin: 10px;
+  width: 100%;
+}
+
+.booking__form-addons h4 {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-thick);
+  font-size: var(--font-md);
+  line-height: var(--line-height-normal);
+  color: var(--color-code-text);
+}
+
+.booking__form-addons_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.booking__form-addons_container label {
+  padding: 5px 10px;
+  cursor: pointer;
+  
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-code-text);
+}
+
+.booking__form input[type='checkbox']:checked + label,
+.booking__form-addons_container label:hover {
+  background-color: var(--color-primary);
+  color: var(--color-code-bg);
+}
+
+.booking__form-button {
+  padding: .75rem 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-thick);
+  font-size: var(--font-md);
+  line-height: var(--line-height-normal);
+  color: var(--color-code-bg);
+
+  border-style: solid;
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  background-image: linear-gradient(0, var(--color-code-bg), var(--color-code-bg));
+  background-size: 0;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+
+.booking__form-button:hover {
+  background-size: 100%;
+  color: var(--color-primary);
+}
+
+.booking__form-submit p {
+  margin: auto 20px;
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-sm);
+  line-height: var(--line-height-normal);
+}
+
+.booking__form-submit_success {
+  color: var(--color-success);
+}
+
+.booking__form-submit_fail {
+  color: var(--color-fail);
+}
+
+.booking__form-name {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.booking__form-name div {
+  width: 100%;
+}

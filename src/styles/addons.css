@@ -1,0 +1,23 @@
+.addons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--size-gutter);
+}
+
+.addons__header {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-header);
+  font-size: var(--font-header);
+  line-height: var(--line-height-loose);
+  color: var(--color-primary);
+}
+
+.addons__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 1rem 0;
+}
