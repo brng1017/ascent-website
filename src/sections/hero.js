@@ -25,7 +25,7 @@ const Hero = ({ hero, slogan }) => {
   const image = data.allImageSharp.edges.find(edge => 
     getSrc(edge.node).indexOf(hero) !== -1
   );
-  const imageData = getImage(image.node);
+  const imageData = getImage(image?.node);
   
   return (
     <div className='hero'>
