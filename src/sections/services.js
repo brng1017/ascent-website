@@ -2,9 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import { srConfig } from '../config';
 import sr from '../utils/sr';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import Services01 from '../images/services-01.jpg';
-import Services02 from '../images/services-02.jpg';
 import { Paragraph } from '../components';
 import '../styles/services.css';
 
@@ -20,11 +19,21 @@ const Services = () => {
   return (
     <div className='services'>
       <div className='services__images' ref={revealContainer}>
-        <Link to='/services'>
-          <img alt="Services" src={Services01} />
+        <Link to='/services' style={{ width: '60%' }}>
+          <StaticImage
+            src='../images/services-01.jpg'
+            alt="Services"
+            placeholder="blurred"
+            layout='fullWidth'
+          />
         </Link>
-        <Link to='/services'>
-          <img alt="Services" src={Services02} />
+        <Link to='/services' style={{ width: '35%' }}>
+          <StaticImage
+            src='../images/services-02.jpg'
+            alt="Services"
+            placeholder="blurred"
+            layout='fullWidth'
+          />
         </Link>
       </div>
       <Paragraph header='SERVICES' paragraph={section} link='/services' button='More info' />

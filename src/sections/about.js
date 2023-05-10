@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import { srConfig } from '../config';
 import sr from '../utils/sr';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import AboutImage from '../images/about-01.jpg';
 import { Paragraph } from '../components';
 import '../styles/about.css';
 
@@ -22,7 +22,12 @@ const About = () => {
 
       <div className='about__image' ref={revealImage}>
         <Link to='/about'>
-          <img alt="About Us" src={AboutImage} />
+          <StaticImage
+            src='../images/about-01.jpg'
+            alt="About Us"
+            layout='fullWidth'
+            placeholder="blurred"
+          />
         </Link>
       </div>
     </section>

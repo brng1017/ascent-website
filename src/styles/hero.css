@@ -16,8 +16,36 @@
     height: 100%;
 }
 
+.hero__image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 2;
+}
+
+.hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero__logo-container {
+    z-index: 3;
+}
+
 .hero__logo {
     height: 300px;
+}
+
+.hero__rise {
+    z-index: 4;
 }
 
 .hero__rise h3 {

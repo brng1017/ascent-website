@@ -6,9 +6,14 @@ import { Header, Hero, Footer } from '../sections';
 import { Mail } from '../components';
 import "../styles/layout.css";
 
+const isSSR = typeof window !== 'undefined';
+
 const getWindowSize = () => {
-  const {innerWidth, innerHeight} = window;
-  return {innerWidth, innerHeight};
+  if (isSSR) {
+    const {innerWidth, innerHeight} = window;
+    return {innerWidth, innerHeight};
+  }
+  return 0;
 }
 
 const Layout = ({ children, hero, slogan }) => {
@@ -39,9 +44,11 @@ const Layout = ({ children, hero, slogan }) => {
   // `)
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      setScroll(window.scrollY);
-    });
+    if (isSSR) {
+      window.addEventListener('scroll', () => {
+        setScroll(window.scrollY);
+      });
+    }
   }, []);
 
   useEffect(() => {
@@ -49,10 +56,14 @@ const Layout = ({ children, hero, slogan }) => {
       setWindowSize(getWindowSize());
     }
 
-    window.addEventListener('resize', handleWindowResize);
+    if (isSSR) {
+      window.addEventListener('resize', handleWindowResize);
+    }
     
     return () => {
-      window.removeEventListener('resize', handleWindowResize);
+      if (isSSR) {
+        window.removeEventListener('resize', handleWindowResize);
+      }
     };
   }, []);
   
