@@ -2,11 +2,10 @@ import * as React from "react";
 
 import { Layout, About, Services } from "../sections";
 import { Seo } from "../components";
-import Hero from '../images/hero-01.jpg';
 // import * as styles from "../styles/index.module.css";
 
 const IndexPage = () => (
-  <Layout hero={Hero} slogan='RISE ABOVE'>
+  <Layout hero='hero-01' slogan='RISE ABOVE'>
     <div>
       <About />
       <Services />

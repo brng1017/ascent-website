@@ -14,7 +14,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `ASCENT LION DANCE`,
-    description: `Learn about Ascent and everything about lion dancing!`,
+    description: `Located in Denver and based at the Queen of Vietnamese Martyrs Parish, Ascent Lion Dance brings the excitement of traditional lion dance performances to your event. Book us today to elevate your celebration to new heights!`,
     author: `@brng1017`,
     siteUrl: `https://ascentliondance.org/`,
   },

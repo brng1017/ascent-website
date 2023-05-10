@@ -2,11 +2,10 @@ import React from 'react';
 
 import { Layout, NewYear, Wedding, GrandOpening, SpecialEvent, Addons } from '../sections';
 import { Seo } from '../components';
-import Hero from '../images/hero-03.jpg';
 
 const Services = () => {
   return (
-    <Layout hero={Hero} slogan='SERVICES'>
+    <Layout hero='hero-03' slogan='SERVICES'>
       <div>
         <NewYear />
         <GrandOpening />
