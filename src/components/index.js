@@ -4,3 +4,4 @@ export { default as Nav } from './nav';
 export { default as Package } from './package';
 export { default as Paragraph } from './paragraph';
 export { default as Seo } from './seo';
+export { default as SideNav } from './sidenav';

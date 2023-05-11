@@ -24,8 +24,6 @@ header::before {
     right: 0;
     z-index: -1;
     background: var(--color-primary);
-    /* background: rgba(19, 21, 22, 0.75); */
-    /* background: linear-gradient(180deg,#222,rgba(34,34,34,.75) 20%,rgba(34,34,34,0)); */
     opacity: 0;
     transition: opacity .8s ease;
     will-change: opacity;
@@ -51,8 +49,13 @@ header::before {
     flex-direction: column;
     justify-content: flex-end;
     margin-left: auto;
+    cursor: pointer;
 
     z-index: 12;
+}
+
+.header__menu-container_icon {
+    font-size: 25px;
 }
 
 .header__ascent {
@@ -97,13 +100,41 @@ header::before {
     cursor: pointer;
 }
 
-.header__mail svg {
+.header__mail-icon {
     filter: brightness(100%);
     transition: filter .2s ease-out;
     will-change: filter;
+    font-size: 25px;
+    vertical-align: middle;
 }
 
-.header__mail svg:hover {
+.header__mail-icon:hover {
     filter: var(--filter-hover);
     transition: filter .2s ease-in;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 80px;
+    }
+
+    .header__ascent h1 {
+        font-size: var(--font-xl);
+        letter-spacing: 6px;
+    }
+
+    .header__menu-container_icon {
+        font-size: var(--font-xl);
+    }
+
+    .header__mail-icon {
+        font-size: var(--font-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .header__ascent h1 {
+        font-size: var(--font-md);
+        letter-spacing: 5px;
+    }
 }

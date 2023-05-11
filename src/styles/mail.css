@@ -184,3 +184,9 @@
 .form__fields-submit_fail {
   color: var(--color-fail);
 }
+
+@media (max-width: 768px) {
+  .form__inner-container {
+    width: 100%;
+  }
+}

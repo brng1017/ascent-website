@@ -6,20 +6,20 @@ import { FiMail } from 'react-icons/fi';
 import Nav from '../components/nav';
 import '../styles/header.css';
 
-const Header = ({ toggleMailForm }) => {
+const Header = ({ toggleMailForm, toggleSideNav }) => {
   return (
     <header className='header'>
       <div className='header__contents'>
         <div className='header__menu'>
           <div className='header__menu-container'>
-            <VscMenu color='#FAF9F6' size={25} />
+            <VscMenu className='header__menu-container_icon' color='#FAF9F6' onClick={toggleSideNav} />
           </div>
         </div>
 
         <div className='header__ascent'>
-          <Link to='/'>
+          {/* <Link to='/'> */}
             <h1>ASCENT LION DANCE</h1>
-          </Link>
+          {/* </Link> */}
         </div>
 
         <div className='header__nav'>
@@ -27,7 +27,7 @@ const Header = ({ toggleMailForm }) => {
         </div>
 
         <div className='header__mail'>
-          <FiMail color='#FAF9F6' size={25} onClick={toggleMailForm} />
+          <FiMail className='header__mail-icon' color='#FAF9F6' onClick={toggleMailForm} />
         </div>
       </div>
     </header>

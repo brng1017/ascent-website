@@ -61,3 +61,19 @@
   background-size: 100%;
   color: var(--color-primary);
 }
+
+@media (max-width: 768px) {
+  .instagram__photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .instagram {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram__photos {
+    padding: var(--size-pad);
+  }
+}

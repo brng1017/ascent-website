@@ -66,3 +66,27 @@ footer {
   filter: var(--filter-hover);
   transition: filter .2s ease-in;
 }
+
+@media (max-width: 1080px) {
+  footer {
+    padding-bottom: var(--size-pad);
+  }
+
+  .footer__container {
+    padding-top: var(--size-pad);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__copyright {
+    font-size: var(--font-sm);
+  }
+}

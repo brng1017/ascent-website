@@ -56,3 +56,19 @@
   background-size: 100%;
   color: var(--color-primary);
 }
+
+@media (max-width: 768px) {
+  .paragraph {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .paragraph {
+    padding: var(--size-pad);
+  }
+
+  .paragraph p {
+    font-size: var(--font-sm);
+  }
+}

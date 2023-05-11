@@ -1,9 +1,8 @@
 import * as React from "react";
 import { useState, useEffect } from 'react';
-// import { useStaticQuery, graphql } from "gatsby";
 
 import { Header, Hero, Footer } from '../sections';
-import { Mail } from '../components';
+import { Mail, SideNav } from '../components';
 import "../styles/layout.css";
 
 const isSSR = typeof window !== 'undefined';
@@ -21,6 +20,7 @@ const Layout = ({ children, hero, slogan }) => {
   const [windowSize, setWindowSize] = useState(getWindowSize());
   const [active, setActive] = useState(false);
   const [showMailForm, setShowMailForm] = useState(false);
+  const [showSideNav, setShowSideNav] = useState(false);
 
   const handleMouseOver = () => {
     setActive(true);
@@ -29,19 +29,15 @@ const Layout = ({ children, hero, slogan }) => {
     setActive(false);
   }
 
+  const toggleSideNav = () => {
+    if (windowSize.innerWidth <= 600) {
+      setShowSideNav(!showSideNav);
+    }
+  }
+
   const toggleMailForm = () => {
     setShowMailForm(!showMailForm);
   }
-
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
 
   useEffect(() => {
     if (isSSR) {
@@ -69,17 +65,16 @@ const Layout = ({ children, hero, slogan }) => {
   
   return (
     <>
-      <div className={`
-      ${scroll > 20 ? 'body--scrolled' : ''} 
-      ${scroll > windowSize.innerHeight ? 'body--scrolled-window' : ''}
-      ${scroll > (windowSize.innerHeight * 0.4) ? 'body--scrolled-half' : ''}
-      `}>
+
+      <div className={`${scroll > 20 ? 'body--scrolled' : ''}`}>
+        <SideNav showSideNav={showSideNav} toggleSideNav={toggleSideNav} />
         <div className={active ? 'nav-hover' : ''}>
           <div onMouseOver={handleMouseOver}
             onFocus={handleMouseOver}
             onMouseOut={handleMouseOut}
-            onBlur={handleMouseOut}>
-            <Header toggleMailForm={toggleMailForm} />
+            onBlur={handleMouseOut}
+          >
+            <Header toggleMailForm={toggleMailForm} toggleSideNav={toggleSideNav} />
           </div>
 
           <Hero hero={hero} slogan={slogan} />
