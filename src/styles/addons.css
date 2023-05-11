@@ -18,7 +18,7 @@
 .addons__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 2em;
   padding: 1rem 0;
 }
 
@@ -34,6 +34,6 @@
   }
 
   .addons__container {
-    gap: 10px;
+    gap: 1em;
   }
 }

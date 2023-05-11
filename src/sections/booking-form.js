@@ -178,7 +178,7 @@ const BookingForm = () => {
               <div className='booking__form-addons_container'>
                 {
                   eventAddons.map((addon) => (
-                    <div>
+                    <div key={addon.value}>
                       <input
                         type='checkbox'
                         id={addon.value}
