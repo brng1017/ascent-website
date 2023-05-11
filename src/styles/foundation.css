@@ -18,3 +18,16 @@
   max-width: 100%;
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .foundation {
+    display: block;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .foundation__image {
+    padding: var(--size-pad);
+  }
+}

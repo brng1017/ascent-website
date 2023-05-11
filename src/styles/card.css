@@ -1,6 +1,5 @@
 .card {
   position: relative;
-  text-align: center;
   aspect-ratio: 1;
 }
 
@@ -28,4 +27,12 @@
 
 .card__image:hover {
   filter: brightness(100%);
+}
+
+@media (max-width: 768px) {
+  .card__header {
+    /* font-weight: var(--font-weight-thick); */
+    font-size: var(--font-xl);
+    margin: var(--space-2);
+  }
 }

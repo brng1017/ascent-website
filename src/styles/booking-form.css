@@ -110,10 +110,18 @@
   font-size: var(--font-sm);
   line-height: var(--line-height-normal);
   color: var(--color-code-text);
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.booking__form input[type='checkbox']:checked + label,
-.booking__form-addons_container label:hover {
+.booking__form-addons_container label::selection {
+  background-color: transparent;
+}
+
+.booking__form input[type='checkbox']:checked + label {
   background-color: var(--color-primary);
   color: var(--color-code-bg);
 }
@@ -173,4 +181,33 @@
 
 .booking__form-name div {
   width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .booking {
+    padding: var(--size-gutter) 10rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .booking {
+    padding: var(--size-gutter);
+  }
+}
+
+@media (max-width: 768px) {
+  .booking__description {
+    font-size: var(--font-sm);
+  }
+
+  .booking__form-name {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .booking__form-addons_container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
 }

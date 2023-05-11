@@ -18,3 +18,16 @@
   max-width: 100%;
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .specials {
+    display: block;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .specials__image {
+    padding: var(--size-pad);
+  }
+}

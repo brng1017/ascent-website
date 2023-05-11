@@ -24,3 +24,23 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media (max-width: 768px) {
+  .services {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .services__images {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .services__images {
+    padding: var(--size-pad);
+  }
+}

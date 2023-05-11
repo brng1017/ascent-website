@@ -18,3 +18,23 @@
   max-width: 100%;
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .whatis {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .whatis__image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatis__image {
+    padding: var(--size-pad);
+  }
+}

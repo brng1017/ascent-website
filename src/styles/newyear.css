@@ -18,3 +18,16 @@
   max-width: 100%;
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .newyear {
+    display: block;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .newyear__image {
+    padding: var(--size-pad);
+  }
+}

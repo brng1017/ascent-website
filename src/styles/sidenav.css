@@ -1,0 +1,37 @@
+.sidenav {
+  position: fixed;
+  top: 0;
+  right: -80%;
+  width: 80%;
+  height: 100%;
+  padding: var(--size-gutter);
+  background: var(--color-code-bg);
+  border-left: 1px solid rgba(0, 0, 0, 0.479);
+  z-index: 999;
+
+  text-align: center;
+  transition: right 0.3s ease-in-out;
+}
+
+.nav-open {
+  right: 0;
+}
+
+.sidenav ul {
+  width: 100%;
+  list-style: none;
+}
+
+.sidenav li {
+  width: 100%;
+  padding: var(--size-pad) 0;
+
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-xl);
+}
+
+.sidenav__close {
+  margin: 10px;
+}

@@ -35,6 +35,7 @@
   --space-5: 32px;
   --space-6: 64px;
   --size-content: 20rem;
+  --size-pad: var(--space-3);
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
   --filter-hover: brightness(80%);
@@ -74,6 +75,20 @@ a {
   opacity: 0;
   transform: translateY(60%);
   pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .nav-hover .header__ascent {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .body--scrolled .header {
+    height: 50px;
+  }
 }
 
 /* html {

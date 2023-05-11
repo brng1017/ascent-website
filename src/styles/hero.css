@@ -9,7 +9,6 @@
     color: var(--color-primary);
     text-align: center;
 
-    /* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../images/hero-01.jpg'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,4 +55,21 @@
     font-weight: var(--font-weight-thick);
     font-size: var(--font-header);
     line-height: var(--line-height-loose);
+}
+
+@media (max-width: 768px) {
+    .hero__logo {
+        height: 250px;
+    }
+
+    .hero__rise h3 {
+        font-weight: var(--font-weight-normal);
+        font-size: var(--font-xxl);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero__logo {
+        height: 200px;
+    }
 }
